@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>שם הקבוצה</title>
+    <style>
+      body {
+        margin: 0;
+        background: #f6f6f6;
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: #222;
+        min-height: 100vh;
+      }
+      header.header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 64px;
+        background: #fff;
+        border-bottom: 1px solid #e5e7eb;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 32px;
+        z-index: 10;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      }
+      .header .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .brand img {
+        height: 36px;
+        width: auto;
+        object-fit: contain;
+      }
+      .header .tag {
+        font-size: 15px;
+        color: #888;
+      }
+      .page {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 96px 16px 32px 16px;
+      }
+      .cards {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 24px;
+      }
+      .card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        padding: 28px 20px 22px 20px;
+        width: 210px;
+        text-align: center;
+        cursor: pointer;
+        transition: box-shadow 0.18s, transform 0.13s;
+        border: 1px solid #ececec;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .card:hover {
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.13);
+        border-color: #b3c6ff;
+        transform: translateY(-4px) scale(1.03);
+      }
+      .avatar {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background: #e9e9e9;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.2em;
+        color: #7a7a7a;
+        border: 2px solid #d1d5db;
+      }
+      .name {
+        font-size: 1.13em;
+        font-weight: 600;
+        margin-bottom: 7px;
+      }
+      .desc {
+        color: #555;
+        font-size: 0.98em;
+      }
+      @media (max-width: 700px) {
+        .cards {
+          flex-direction: column;
+          align-items: center;
+          gap: 16px;
+        }
+        .page {
+          padding-top: 80px;
+        }
+        header.header {
+          padding: 0 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header" aria-label="כותרת">
+      <div class="brand">
+        <img src="assets/aharai-logo.png" alt="לוגו אחריי!" />
+        <img src="assets/mechina-logo.jpg" alt="לוגו המכינה" />
+      </div>
+      <div class="tag">בחרו מכיניסט לצפייה בפרופיל</div>
+    </header>
+    <div class="page">
+      <div class="cards">
+        <div
+          class="card"
+          onclick="location.href='student-template.html?student=1'"
+        >
+          <div class="avatar">א</div>
+          <div class="name">אורי כהן</div>
+          <div class="desc">Full-Stack Developer</div>
+        </div>
+        <div
+          class="card"
+          onclick="location.href='student-template.html?student=2'"
+        >
+          <div class="avatar">ב</div>
+          <div class="name">בר רוזן</div>
+          <div class="desc">Cyber Expert</div>
+        </div>
+        <div
+          class="card"
+          onclick="location.href='student-template.html?student=3'"
+        >
+          <div class="avatar">ג</div>
+          <div class="name">גילי לוי</div>
+          <div class="desc">AI Researcher</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
